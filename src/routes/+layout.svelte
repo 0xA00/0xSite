@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../app.css";
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.ico';
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
 

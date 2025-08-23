@@ -14,7 +14,6 @@ export async function load() {
     if (!base64Image) {
         return new Response('Failed to convert image', { status: 500 });
     }
-
     
     return {
         profileImg: base64Image
