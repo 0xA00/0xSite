@@ -1,15 +1,11 @@
 <script lang="ts">
 	import "../app.css";
-	import favicon from '$lib/assets/ouppy.png';
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
 
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
 
 
 	<div class="layout">
