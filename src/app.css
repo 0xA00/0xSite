@@ -1,0 +1,152 @@
+@font-face{
+    font-family: 'Space Grotesk';
+    src: url('../src/lib/font/GeistMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    }
+
+body *{
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    body {
+        max-width: 80%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+body {
+    opacity: 0;
+    animation: fadeInBody 0.4s ease-in forwards;
+}
+
+
+@keyframes fadeInBody {
+    to {
+        opacity: 1;
+    }
+}
+
+:root{
+    --text: #ffffff;
+    --background: #141414;
+    --primary: #ff4d4d;
+    --secondary: #a2a2f6;
+    --accent: #b8aec6;
+    --grey: #4d4d4d;
+}
+
+a {
+    color: var(--secondary);
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+li {
+    list-style: none;
+}
+
+li::before {
+  content: "- ";
+  color: var(--secondary);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.colored {
+    color: var(--primary);
+}
+
+
+:root {
+    color-scheme: dark;
+    background-color: var(--background);
+}
+
+
+p {
+    color: var(--text);
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 100;
+}
+
+.panel {
+    padding: 1.5rem;
+    border: 2px solid var(--grey);
+    position: relative;
+}
+
+.panel-label {
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 0 4px;
+    z-index: 10;
+}
+
+
+
+.highlight {
+    --stripes: repeating-linear-gradient(
+        100deg,
+        #fff 0%,
+        #fff 7%,
+        transparent 10%,
+        transparent 12%,
+        #fff 16%
+    );
+    --rainbow: repeating-linear-gradient(
+        100deg,
+        #60a5fa 10%,
+        #e879f9 15%,
+        #60a5fa 20%,
+        #5eead4 25%,
+        #60a5fa 30%
+    );
+    position: relative;
+    z-index: 0;
+    color: transparent;
+    isolation: isolate;
+    display: inline-block;
+    background-image: var(--stripes), var(--rainbow);
+    background-size: 400% 100%, 200% 100%;
+    background-position: 0% 0%, 0% 0%;
+    animation: highlightMove 60s linear infinite;
+    border-radius: 0.2em;
+    opacity: 0.9;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@keyframes highlightMove {
+    0% {
+        background-position: 0% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%, 200% 0%;
+    }
+}
+
