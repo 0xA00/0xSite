@@ -13,7 +13,6 @@
 
 <style>
 .text {
-    
     word-break: break-word;
 }
 

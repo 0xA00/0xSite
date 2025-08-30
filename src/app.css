@@ -150,3 +150,7 @@ p {
     }
 }
 
+/* need to add it here cuz somehow it doesn't work whenever I write it in the layout.svelte*/
+.panel-content > * {
+    margin-bottom: 1rem;
+}

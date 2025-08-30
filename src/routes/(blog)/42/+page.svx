@@ -1,0 +1,13 @@
+---
+title: 42 Piscine
+author: "0xA0"
+date: "08/30/2025"
+---
+
+During the month of July 2025, I had the opportunity to participate in the 42 Piscine in Perpignan, France. This intensive coding bootcamp was a unique experience that challenged my skills and pushed me to my limits.
+
+After an entire month of rigorous work, I managed to be selected among the candidates to be part of the 42 school.
+
+it was an unique experience and I learned a lot of things in the short amount of time, I look forward to continue to learn during my time at 42 and apply that knowledge in real-world projects.
+
+![42logo](./42-Perpignan.png)

@@ -1,6 +1,7 @@
 <script>
 	import MulPanel from '$lib/comp/mulPanel.svelte';
   import Panel from '$lib/comp/Panel.svelte';
+	import Posts from '$lib/comp/Posts.svelte';
 
 
   export let data;
@@ -37,6 +38,8 @@
   </Panel>
 
 </MulPanel>
+
+<Posts posts={data.posts}/>
 
 <style>
 img {
