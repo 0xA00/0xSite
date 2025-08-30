@@ -154,3 +154,10 @@ p {
 .panel-content > * {
     margin-bottom: 1rem;
 }
+
+.panel-content img {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	width: auto;
+}
