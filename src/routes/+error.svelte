@@ -30,19 +30,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 6rem;
+
     font-family: 'Courier New', Courier, monospace;
     text-shadow: 2px 2px 0 #000, 4px 4px 0 #222;
     image-rendering: pixelated;
     letter-spacing: 0.1em;
     text-align: center;
 }
-@media (max-width: 600px) {
-    .error-info {
-        font-size: 3rem;
-        padding: 1rem;
-    }
+
+.error-info > h1 {
+    font-size: clamp(2rem, 8vw, 6rem);
 }
+
 
 
 
