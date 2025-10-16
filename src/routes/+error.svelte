@@ -37,6 +37,15 @@
     letter-spacing: 0.1em;
     text-align: center;
 }
+@media (max-width: 600px) {
+    .error-info {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+}
+
+
+
 
 .error-page {
     position: relative;
