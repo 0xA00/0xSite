@@ -39,7 +39,7 @@
 }
 
 .error-info > h1 {
-    font-size: clamp(2rem, 8vw, 6rem);
+    font-size: clamp(4rem, 8vw, 6rem);
 }
 
 
