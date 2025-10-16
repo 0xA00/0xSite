@@ -1,4 +1,5 @@
 <script>
+	import GoL from '$lib/comp/GoL.svelte';
 	import MulPanel from '$lib/comp/mulPanel.svelte';
   import Panel from '$lib/comp/Panel.svelte';
 	import Posts from '$lib/comp/Posts.svelte';
@@ -41,6 +42,8 @@
 
 <Posts posts={data.posts}/>
 
+
+
 <style>
 img {
 
@@ -49,6 +52,8 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
+    filter: brightness(2);
 }
 
 p {
