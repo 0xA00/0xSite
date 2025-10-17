@@ -1,6 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte';
 
+    export let random: number = 0.5;
+
     let canvas: HTMLCanvasElement;
     let width: number;
     let rows: number;
@@ -9,7 +11,7 @@
 
     function createGrid() {
         return Array.from({ length: rows }, () =>
-            Array.from({ length: width }, () => Math.random() > 0.65 ? 1 : 0)
+            Array.from({ length: width }, () => Math.random() > random ? 1 : 0)
         );
     }
 
@@ -50,6 +52,15 @@
         }
     }
 
+    function handleClick(event: MouseEvent) {
+        const rect = canvas.getBoundingClientRect();
+        const x = Math.floor((event.clientX - rect.left) / cellSize);
+        const y = Math.floor((event.clientY - rect.top) / cellSize);
+        if (y >= 0 && y < rows && x >= 0 && x < width) {
+            grid[y][x] = 1;
+        }
+    }
+
     onMount(() => {
         const parent = canvas.parentElement;
         if (parent) {
@@ -62,6 +73,9 @@
         grid = createGrid();
         const ctx = canvas.getContext('2d');
         function loop() {
+            // sleep 100ms
+            const start = performance.now();
+            while (performance.now() - start < 50) {}
             grid = nextGen(grid);
             if (ctx) draw(ctx, grid);
             requestAnimationFrame(loop);
@@ -76,11 +90,12 @@
         width: 100%;
         height: 100%;
         display: block;
-        border: 1px solid #ccc;
+        border: 2px solid var(--grey);
     }
 </style>
 
 <canvas
     bind:this={canvas}
     class="responsive-canvas"
+    on:click={handleClick}
 ></canvas>

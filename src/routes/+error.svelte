@@ -9,7 +9,7 @@
 </script>
 
 <div class="error-page">
-  <GoL />
+  <GoL random={0.35}/>
   <div class="error-info">
     <h1>{ page.status }</h1>
   </div>

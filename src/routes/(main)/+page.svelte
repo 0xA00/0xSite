@@ -3,6 +3,7 @@
 	import MulPanel from '$lib/comp/mulPanel.svelte';
   import Panel from '$lib/comp/Panel.svelte';
 	import Posts from '$lib/comp/Posts.svelte';
+	import WidePanel from '$lib/comp/widePanel.svelte';
 
 
   export let data;
@@ -42,7 +43,9 @@
 
 <Posts posts={data.posts}/>
 
-
+<WidePanel title="Game of Life">
+  <GoL random={0.5}/>
+</WidePanel>
 
 <style>
 img {
