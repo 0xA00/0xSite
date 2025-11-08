@@ -11,7 +11,6 @@
 
 	<svelte:head>
 		<title>0xA0.dev™</title>
-		<meta name="description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="keywords" content="0xA0, developer, portfolio, projects, blog, contact" />
 		<meta name="author" content="0xA0" />
