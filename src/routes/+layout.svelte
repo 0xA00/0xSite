@@ -19,15 +19,13 @@
 		<meta property="og:type" content="website" />
  		<meta property="og:url" content="https://0xa0.dev/" />
   		<meta property="og:title" content="0xA0.dev™" />
-		<meta property="og:image" content={headsvg} />
+		<meta property="og:image" content="/head.svg" />
 		<meta property="og:image:width" content="300" />
 		<meta property="og:image:height" content="100" />
-		<meta property="og:description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://0xa0.dev/" />
 		<meta property="twitter:title" content="0xA0.dev™" />
-		<meta property="twitter:description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
-		<meta property="twitter:image" content={headsvg} />
+		<meta property="twitter:image" content="/head.svg" />
 		<meta name="theme-color" content="#121212" />
 	</svelte:head>
 <Animbackground />
