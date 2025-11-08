@@ -4,13 +4,32 @@
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
 	import Animbackground from "$lib/comp/animbackground.svelte";
+	import headsvg from '$lib/assets/head.svg';
 
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+	<svelte:head>
+		<title>0xA0.dev™</title>
+		<meta name="description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="0xA0, developer, portfolio, projects, blog, contact" />
+		<meta name="author" content="0xA0" />
+		<link rel="icon" href={favicon} />
+		<meta property="og:type" content="website" />
+ 		<meta property="og:url" content="https://0xa0.dev/" />
+  		<meta property="og:title" content="0xA0.dev™" />
+		<meta property="og:image" content={headsvg} />
+		<meta property="og:image:width" content="300" />
+		<meta property="og:image:height" content="100" />
+		<meta property="og:description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://0xa0.dev/" />
+		<meta property="twitter:title" content="0xA0.dev™" />
+		<meta property="twitter:description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
+		<meta property="twitter:image" content={headsvg} />
+		<meta name="theme-color" content="#121212" />
+	</svelte:head>
 <Animbackground />
 
 	<div class="layout">
@@ -36,15 +55,7 @@
 
 
 
-	<svelte:head>
-		<title>0xA0 - Developer Portfolio</title>
-		<meta name="description" content="Welcome to 0xA0's developer portfolio. Explore projects, blog posts, and get in touch!" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="keywords" content="0xA0, developer, portfolio, projects, blog, contact" />
-		<meta name="author" content="0xA0" />
-		<link rel="icon" href={favicon} />
-		<meta property="og:image" content="/head.svg" />
-	</svelte:head>
+
 
 
 <style>
