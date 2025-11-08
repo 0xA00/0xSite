@@ -24,6 +24,7 @@
     <li>Discord: <a href="https://discordapp.com/users/298221448642953217">0xA0</a></li>
   </ul>
 
+  <img src={data.profileGif} alt="Portrait of 0xA0" style="width: 88px; height: 31px; display: flex; align: left; margin: 0; border-radius: 0;"/>
 </Panel>
 
 <MulPanel>
@@ -58,6 +59,7 @@ img {
     margin: 0 auto;
     filter: brightness(2);
 }
+
 
 p {
   margin-bottom: 1em;

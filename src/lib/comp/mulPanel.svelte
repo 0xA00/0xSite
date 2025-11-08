@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    
 }
 
 @media (max-width: 798px) {

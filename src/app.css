@@ -78,7 +78,6 @@ li::before {
 
 :root {
     color-scheme: dark;
-    background-color: var(--background);
 }
 
 

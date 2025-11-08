@@ -38,9 +38,22 @@ export async function load() {
     if (!base64Image) {
         return new Response('Failed to convert image', { status: 500 });
     }
+
+    const gifPath = `${process.cwd()}/static/0xA0.gif`;
+    let base64Gif = null;
+    try {
+      const gifBuffer = await sharp(gifPath)
+        .resize(88, 31, { fit: 'cover' })
+        .gif()
+        .toBuffer();
+      base64Gif = `data:image/gif;base64,${gifBuffer.toString('base64')}`;
+    } catch (e) {
+      base64Gif = null;
+    }
     
     return {
         profileImg: base64Image,
-        posts
+        posts,
+        profileGif: base64Gif
     };
 }

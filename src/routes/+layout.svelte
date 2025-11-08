@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.ico';
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
+	import Animbackground from "$lib/comp/animbackground.svelte";
 
 	let { children } = $props();
 </script>
@@ -10,7 +11,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
-
+<Animbackground />
 
 	<div class="layout">
 		<div class="header">
@@ -43,10 +44,15 @@
 	}
 
 	.footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-top: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 100%;
 		text-align: center;
-		padding: 1rem;
-		font-size: 0.9rem;
-		color: #888;
 	}
 	.layout {
 		min-height: 98vh;
@@ -54,7 +60,10 @@
 		flex-direction: column;
 	}
 
-	.footer {
-		margin-top: auto;
+	.footer > p {
+		font-size: 1rem;
+		text-shadow: 2px 2px 6px rgba(0,0,0,0.4), 0 0 2px #3a3a3a;
+		margin-top: 0.5rem;
 	}
+
 </style>
