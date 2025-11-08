@@ -12,19 +12,20 @@
 	<svelte:head>
 		<title>0xA0.dev™</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="0xA0.dev personal's canvas of expression." />
 		<meta name="keywords" content="0xA0, developer, portfolio, projects, blog, contact" />
 		<meta name="author" content="0xA0" />
 		<link rel="icon" href={favicon} />
 		<meta property="og:type" content="website" />
  		<meta property="og:url" content="https://0xa0.dev/" />
   		<meta property="og:title" content="0xA0.dev™" />
-		<meta property="og:image" content="/head.svg" />
-		<meta property="og:image:width" content="300" />
-		<meta property="og:image:height" content="100" />
+		<meta property="og:image" content="static/head.png" />
+		<meta property="og:description" content="0xA0.dev personal's canvas of expression." />
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://0xa0.dev/" />
 		<meta property="twitter:title" content="0xA0.dev™" />
-		<meta property="twitter:image" content="/head.svg" />
+		<meta property="twitter:image" content="static/head.png" />
+		<meta property="twitter:description" content="0xA0.dev personal's canvas of expression." />
 		<meta name="theme-color" content="#121212" />
 	</svelte:head>
 <Animbackground />
