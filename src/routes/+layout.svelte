@@ -4,8 +4,6 @@
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
 	import Animbackground from "$lib/comp/animbackground.svelte";
-	import headsvg from '$lib/assets/head.svg';
-
 	let { children } = $props();
 </script>
 
