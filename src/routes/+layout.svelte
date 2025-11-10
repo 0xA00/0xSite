@@ -26,7 +26,7 @@
 		<meta property="twitter:description" content="0xA0.dev personal's canvas of expression." />
 		<meta name="theme-color" content="#121212" />
 	</svelte:head>
-<Animbackground />
+
 
 	<div class="layout">
 		<div class="header">
