@@ -1,6 +1,6 @@
 <script>
   export let opacity = 0.7;
-  export let blurAmount = 80;
+  export let blurAmount = 32;
 </script>
 
 <div class="gradient-container">
