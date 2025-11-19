@@ -3,7 +3,7 @@
 	import favicon from '$lib/assets/favicon.ico';
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
-	import Animbackground from "$lib/comp/animbackground.svelte";
+	import DigitalMesh from "$lib/comp/DigitalMesh.svelte";
 	let { children } = $props();
 </script>
 
@@ -27,11 +27,13 @@
 		<meta name="theme-color" content="#121212" />
 	</svelte:head>
 
+	<DigitalMesh />
 
 	<div class="layout">
 		<div class="header">
 			<Title />
 		</div>
+
 
 		<Line>
 			Content
