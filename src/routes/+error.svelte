@@ -9,7 +9,7 @@
 </script>
 
 <div class="error-page">
-  <GoL random={0.35}/>
+
   <div class="error-info">
     <h1>{ page.status }</h1>
   </div>
@@ -39,11 +39,8 @@
 }
 
 .error-info > h1 {
-    font-size: clamp(4rem, 8vw, 6rem);
+    font-size: clamp(8rem, 16vw, 12rem);
 }
-
-
-
 
 
 .error-page {

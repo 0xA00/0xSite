@@ -33,6 +33,9 @@ body *{
 body {
     opacity: 0;
     animation: fadeInBody 0.4s ease-in forwards;
+    background-color: #050505;
+    background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
+    background-size: 24px 24px;
 }
 
 
@@ -49,6 +52,7 @@ body {
     --secondary: #a2a2f6;
     --accent: #b8aec6;
     --grey: #4d4d4d;
+    
 }
 
 a {

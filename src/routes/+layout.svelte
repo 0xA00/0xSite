@@ -27,13 +27,10 @@
 		<meta name="theme-color" content="#121212" />
 	</svelte:head>
 
-	<DigitalMesh />
-
 	<div class="layout">
 		<div class="header">
 			<Title />
 		</div>
-
 
 		<Line>
 			Content

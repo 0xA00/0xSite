@@ -44,10 +44,6 @@
 
 <Posts posts={data.posts}/>
 
-<WidePanel title="Game of Life">
-  <GoL random={0.5}/>
-</WidePanel>
-
 <style>
 img {
 
@@ -57,7 +53,7 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
-    filter: brightness(2);
+
 }
 
 
