@@ -1,4 +1,5 @@
 <script>
+	import Ascii from '$lib/comp/ascii.svelte';
 	import GoL from '$lib/comp/GoL.svelte';
 	import MulPanel from '$lib/comp/mulPanel.svelte';
   import Panel from '$lib/comp/Panel.svelte';
@@ -10,6 +11,7 @@
 </script>
 
 <Panel title="Description">
+  <Ascii />
   <p> Hi ! My name is <span class="highlight">0xA0</span>, but you can also call me 0x.</p>
 
   <p>I'm a recent computer science graduate but also new <span class="highlight">42 school's student</span> !
