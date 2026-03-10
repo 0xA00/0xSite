@@ -11,6 +11,7 @@
         <ul class="nav-links">
             <li><a href="https://github.com/0xA00" target="_blank">Projects</a></li>
             <li><a href="mailto:sah@0xA0.dev">Mail</a></li>
+            <li><a href="/guest">Guestbook</a></li>
         </ul>
     </div>
 </nav>
