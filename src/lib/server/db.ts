@@ -1,10 +1,8 @@
 import Database from 'better-sqlite3';
-import { resolve } from 'path';
+import { resolve } from 'node:path';
+import { mkdirSync } from 'node:fs';
 
 const dbPath = resolve('data', 'guestbook.db');
-
-// Ensure data directory exists
-import { mkdirSync } from 'fs';
 mkdirSync(resolve('data'), { recursive: true });
 
 const db = new Database(dbPath);
