@@ -391,6 +391,7 @@
         display: flex;
         gap: 4px;
         overflow-x: auto;
+        padding-bottom: 12px;
     }
 
     .day-labels {
