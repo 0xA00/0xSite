@@ -6,6 +6,8 @@
 	import DigitalMesh from "$lib/comp/DigitalMesh.svelte";
 	import Navbar from "$lib/comp/Navbar.svelte";
 
+	
+
 	let { children } = $props();
 </script>
 
