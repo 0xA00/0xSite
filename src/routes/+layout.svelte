@@ -4,9 +4,9 @@
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
 	import DigitalMesh from "$lib/comp/DigitalMesh.svelte";
-	import Navbar from "$lib/comp/Navbar.svelte";
+	import Navbar from "$lib/comp/Navbars.svelte";
 
-	
+
 
 	let { children } = $props();
 </script>
