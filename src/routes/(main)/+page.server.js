@@ -30,7 +30,6 @@ export async function load() {
     const randomFile = files[Math.floor(Math.random() * files.length)];
     const imgPath = `${imgDir}/${randomFile}`;
     const buffer = await sharp(imgPath)
-        .resize(256, 256, { fit: 'cover' })
         .webp({ quality: 75 })
         .toBuffer();
 

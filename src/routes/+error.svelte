@@ -1,11 +1,5 @@
 <script>
 	import { page } from '$app/state';
-    import GoL from '$lib/comp/GoL.svelte';
-
-
-
-
-
 </script>
 
 <div class="error-page">

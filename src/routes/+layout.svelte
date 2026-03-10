@@ -4,6 +4,8 @@
 	import Title from "$lib/comp/Title.svelte";
 	import Line from "$lib/comp/Line.svelte";
 	import DigitalMesh from "$lib/comp/DigitalMesh.svelte";
+	import Navbar from "$lib/comp/Navbar.svelte";
+
 	let { children } = $props();
 </script>
 
@@ -28,20 +30,12 @@
 	</svelte:head>
 
 	<div class="layout">
-		<div class="header">
-			<Title />
-		</div>
 
-		<Line>
-			Content
-		</Line>
+		<Navbar />
 
 		{@render children?.()}
 
 		<div class="footer">
-			<Line>
-				Footer
-			</Line>
 			<p>&copy; {new Date().getFullYear()} 0xa0.dev. All rights reserved.</p>
 		</div>
 
@@ -54,12 +48,6 @@
 
 
 <style>
-	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem;
-	}
 
 	.footer {
 		display: flex;
@@ -82,6 +70,10 @@
 		font-size: 1rem;
 		text-shadow: 2px 2px 6px rgba(0,0,0,0.4), 0 0 2px #3a3a3a;
 		margin-top: 0.5rem;
+	}
+
+	:global(.layout > :nth-child(2)) {
+		margin-top: 2rem;
 	}
 
 </style>
