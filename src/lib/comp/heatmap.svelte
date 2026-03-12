@@ -183,7 +183,7 @@
             <div class="stat-divider"></div>
             <div class="stat-block">
                 <span class="stat-num streak">{currentStreak}</span>
-                <span class="stat-label">day streak 🔥</span>
+                <span class="stat-label">day streak</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-block">
