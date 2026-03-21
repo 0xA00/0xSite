@@ -1,26 +1,38 @@
 <script>
-	import Panel from '$lib/comp/Panel.svelte';
-
-    	let { children } = $props();
+  let { children, data } = $props();
 </script>
 
+<a href="../">← go back</a>
+<h1 id="blog-title">{data.title}</h1>
 
-<div class="panel">
-  <div class="panel-label">Blog</div>
-  <div class="panel-content">
-    {@render children?.()}
-  </div>
+<div class="blog-content">{@render children?.()}</div>
 
-    <a href="../">Go Back</a>
-
-</div>
+<a href="../">← go back</a>
 
 <style>
-.panel {
+  #blog-title {
+    color: #fff;
+  }
 
-    background: var(--background);
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(0,0,0,0.12);
-    filter: drop-shadow(0 0 8px rgba(0,0,0,0.10));
-}
+  #blog-title::before {
+    content: "[ ";
+    color: var(--accent);
+  }
+
+  #blog-title::after {
+    content: " ]";
+    color: var(--accent);
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+
+  :global(.blog-content img) {
+    display: block;
+    margin: 1.5rem 0;
+    max-width: 100%;
+    height: auto;
+  }
 </style>
-

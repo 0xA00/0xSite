@@ -1,93 +1,106 @@
 <script>
-	import Ascii from '$lib/comp/ascii.svelte';
-	import MulPanel from '$lib/comp/mulPanel.svelte';
-  import Panel from '$lib/comp/Panel.svelte';
 	import Posts from '$lib/comp/Posts.svelte';
-  import Heatmap from '$lib/comp/heatmap.svelte';
-  import Ghactivity from '$lib/comp/ghactivity.svelte';
 
   export let data;
 </script>
 
-<MulPanel>
+<div class="profile-header">
+  {#if data.pouppyData}
+    <img class="pfp" src={data.pouppyData} alt="profile picture" />
+  {/if}
+  <h1 id="username"><span class="highlight">0xA0</span></h1>
+</div>
 
-  <Panel title="Description">
-    <Ascii />
-    <p> Hi ! My name is <span class="highlight">0xA0</span>, but you can also call me 0x.</p>
+<p>Hi! it's me, 0xA0. I'm a 23-year-old developer (I know I'm unc).</p>
+<p>Welcome to my personal canvas of expression and plot of land. I really like to redo that website every few months so don't mind the changes.</p>
+<p>I'm a computer science graduate but also a 42 school's student.</p>
+<p>If you want to leave a message, feel free to write something on my <a href="/guest">guestbook</a> !</p>
 
-    <p>I'm a recent computer science graduate but also new <span class="highlight">42 school's student</span> !
-      This website is meant to show my work and projects.</p>
+<h2>my socials</h2>
+<ul class="socials">
+  <li><a href="https://twitter.com/0xA0_" target="_blank">Twitter</a></li>
+  <li><a href="https://github.com/0xA00" target="_blank">GitHub</a></li>
+  <li><a href="https://discordapp.com/users/298221448642953217">Discord</a></li>
+</ul>
 
-    <p>Feel free to explore and reach out if you have any questions!</p>
+<Posts posts={data.posts} />
 
-    <p>You can find me on various platforms:</p>
-    <ul>
-      <li>GitHub: <a href="https://github.com/0xA00">0xA00</a></li>
-      <li>Twitter: <a href="https://twitter.com/0xA0_">@0xA0_</a></li>
-      <li>Discord: <a href="https://discordapp.com/users/298221448642953217">0xA0</a></li>
-    </ul>
-
-  </Panel>
-
-  <div class="sidebar">
-    <Panel title="Quote">
-      <blockquote>
-        "A lie will remain a lie! Young Hollow, knowing this, do you still desire peace?"
-        <cite>— Aldia</cite>
-      </blockquote>
-    </Panel>
-    <Posts posts={data.posts} />
-  </div>
-</MulPanel>
-<MulPanel>
-  <Heatmap />
-  <Ghactivity />
- 
-
-</MulPanel>
-
-
+<h2>buttons</h2>
+<div class="buttons">
+  {#each data.buttons as btn}
+    {#if btn.href}
+      <a href={btn.href} target="_blank" rel="noopener noreferrer">
+        <img src={btn.src} alt="88x31 button" width="88" height="31" />
+      </a>
+    {:else}
+      <img src={btn.src} alt="88x31 button" width="88" height="31" />
+    {/if}
+  {/each}
+</div>
 
 <style>
-p {
-  margin-bottom: 1em;
-}
+  p {
+    margin-bottom: 1em;
+  }
 
-li {
-  list-style: none;
-  padding-left: 1.5em;
-}
-li::before {
-  content: "- ";
-  color: var(--accent);
-}
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1em;
+  }
 
-blockquote {
-  margin: 1em 0;
-  padding: 0.5em 1em;
-  border-left: 4px solid var(--accent);
-  background: var(--background);
-  text-align: left;
+  #username {
+    margin: 0;
+  }
 
-    cite {
-      display: block;
-      text-align: right;
-      font-size: 0.8em;
-      color: var(--secondary);
-    }
-}
+  .pfp {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+  }
 
+  #username {
+    color: #fff;
+  }
 
-.highlight {
+  #username::before {
+    content: "[ ";
     color: var(--accent);
-    font-weight: bold;
-}
+  }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
+  #username::after {
+    content: " ]";
+    color: var(--accent);
+  }
 
+  .socials {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 
+  .socials li::before {
+    content: "— ";
+    color: var(--secondary);
+  }
+
+  .socials a {
+    font-size: 0.875rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .buttons img {
+    image-rendering: pixelated;
+  }
 </style>

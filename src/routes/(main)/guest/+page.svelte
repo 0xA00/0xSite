@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Panel from '$lib/comp/Panel.svelte';
 	import { enhance } from '$app/forms';
 
 	let { data, form } = $props();
@@ -19,70 +18,68 @@
 </script>
 
 <svelte:head>
-	<title>Guestbook — 0xA0.dev™</title>
+	<title>Guestbook — 0xA0.dev</title>
 </svelte:head>
 
-<Panel title="Guestbook">
-	<p class="intro">Leave a message! Say hi, share a thought, or drop some wisdom.</p>
+<h2>Guestbook</h2>
+<p class="intro">Leave a message! Say hi, share a thought, or drop some wisdom.</p>
 
-	<form
-		method="POST"
-		use:enhance={() => {
-			loading = true;
-			return async ({ update }) => {
-				await update();
-				loading = false;
-			};
-		}}
-	>
-		<div class="form-row">
-			<input
-				type="text"
-				name="name"
-				placeholder="Your name"
-				maxlength="30"
-				required
-				autocomplete="off"
-			/>
-			<input
-				type="text"
-				name="message"
-				placeholder="Your message (280 chars max)"
-				maxlength="280"
-				required
-				autocomplete="off"
-			/>
-			<button type="submit" disabled={loading}>
-				{loading ? '...' : 'Sign'}
-			</button>
-		</div>
+<form
+	method="POST"
+	use:enhance={() => {
+		loading = true;
+		return async ({ update }) => {
+			await update();
+			loading = false;
+		};
+	}}
+>
+	<div class="form-row">
+		<input
+			type="text"
+			name="name"
+			placeholder="Your name"
+			maxlength="30"
+			required
+			autocomplete="off"
+		/>
+		<input
+			type="text"
+			name="message"
+			placeholder="Your message (280 chars max)"
+			maxlength="280"
+			required
+			autocomplete="off"
+		/>
+		<button type="submit" disabled={loading}>
+			{loading ? '...' : 'Sign'}
+		</button>
+	</div>
 
-		{#if form?.error}
-			<p class="error">{form.error}</p>
-		{/if}
-		{#if form?.success}
-			<p class="success">Message posted!</p>
-		{/if}
-	</form>
-</Panel>
-
-<Panel title="Messages">
-	{#if data.messages.length === 0}
-		<p class="empty">No messages yet. Be the first to sign!</p>
-	{:else}
-		<div class="messages">
-			{#each data.messages as msg (msg.id)}
-				<div class="message">
-					<div class="message-header">
-						<span class="author">{msg.name}</span>
-						<span class="date">{formatDate(msg.created_at)}</span>
-					</div>
-					<p class="message-body">{msg.message}</p>
-				</div>
-			{/each}
-		</div>
+	{#if form?.error}
+		<p class="error">{form.error}</p>
 	{/if}
-</Panel>
+	{#if form?.success}
+		<p class="success">Message posted!</p>
+	{/if}
+</form>
+
+<h2>Messages</h2>
+{#if data.messages.length === 0}
+	<p class="empty">No messages yet. Be the first to sign!</p>
+{:else}
+	<div class="messages">
+		{#each data.messages as msg (msg.id)}
+			<div class="message">
+				<div class="message-header">
+					<span class="author">{msg.name}</span>
+					<span class="date">{formatDate(msg.created_at)}</span>
+				</div>
+				<p class="message-body">{msg.message}</p>
+			</div>
+		{/each}
+	</div>
+{/if}
 
 <style>
 	.intro {
@@ -98,7 +95,7 @@
 
 	input {
 		background: transparent;
-		border: 1px solid var(--grey);
+		border: 1px solid var(--border);
 		color: var(--text);
 		padding: 0.5rem 0.75rem;
 		font-size: 0.875rem;
@@ -123,7 +120,7 @@
 
 	button {
 		background: var(--primary);
-		color: var(--text);
+		color: #0a0a0a;
 		border: none;
 		padding: 0.5rem 1.25rem;
 		font-family: inherit;
@@ -148,7 +145,7 @@
 	}
 
 	.success {
-		color: #5eead4;
+		color: var(--accent);
 		margin-top: 0.5rem;
 		font-size: 0.8rem;
 	}
@@ -160,7 +157,7 @@
 	}
 
 	.message {
-		border-left: 3px solid var(--grey);
+		border-left: 3px solid var(--border);
 		padding: 0.5rem 0.75rem;
 		transition: border-color 0.2s;
 	}
@@ -184,7 +181,7 @@
 	}
 
 	.date {
-		color: var(--grey);
+		color: var(--secondary);
 		font-size: 0.75rem;
 		white-space: nowrap;
 	}
@@ -195,7 +192,7 @@
 	}
 
 	.empty {
-		color: var(--grey);
+		color: var(--secondary);
 		font-style: italic;
 	}
 </style>
